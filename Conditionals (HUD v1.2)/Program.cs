@@ -18,24 +18,173 @@ namespace Conditionals__HUD_v1._2_
         static void Main(string[] args)
         {
             ShowHUD();
-            damage = 100;
+
+            Console.ReadKey(true);
+
+            damage = 10;
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("The Player has taken " + damage + " damage.");
+            Console.WriteLine();
+            Console.ForegroundColor = ConsoleColor.Gray;
             TakeDamage(damage);
-            //hp = 200;
-            //Heal(hp);
-            weaponPickUp = 1;
+
+            ShowHUD();
+
+            Console.ReadKey(true);
+
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.WriteLine("Player picked up a new weapon!");//+weapon
+            Console.ForegroundColor = ConsoleColor.Gray;
+            Console.WriteLine();
+            weapon = weapon + 1;
+
+            ShowHUD();
+
+            Console.ReadKey(true);
+
+            damage = 30;
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("The Player has taken " + damage + " damage.");
+            Console.WriteLine();
+            Console.ForegroundColor = ConsoleColor.Gray;
+            TakeDamage(damage);
+
+            ShowHUD();
+
+            Console.ReadKey(true);
+
+            
+            Console.ForegroundColor = ConsoleColor.Green;
+            hp = 100;
+            Console.WriteLine("The Player used a Max Potion and healed " + hp + " Health Points.");
+            Heal(hp);
+            Console.WriteLine();
+            Console.ForegroundColor = ConsoleColor.Gray;
+            
             ShowHUD();
 
 
-            weaponPickUp = 1;
-            
+            Console.ReadKey(true);
+
+            damage = 40;
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("The Player has taken " + damage + " damage.");
+            Console.WriteLine();
+            Console.ForegroundColor = ConsoleColor.Gray;
+            TakeDamage(damage);
+
+            ShowHUD();
 
             Console.ReadKey(true);
+
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.WriteLine("Player picked up a new weapon!");//+weapon
+            Console.ForegroundColor = ConsoleColor.Gray;
+            Console.WriteLine();
+            weapon = weapon + 1;
+
+            ShowHUD();
+
+            Console.ReadKey(true);
+
+            damage = 20;
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("The Player has taken " + damage + " damage.");
+            Console.WriteLine();
+            Console.ForegroundColor = ConsoleColor.Gray;
+            TakeDamage(damage);
+
+            ShowHUD();
+
+            Console.ReadKey(true);
+
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.WriteLine("Player picked up a new weapon!");//+weapon
+            Console.ForegroundColor = ConsoleColor.Gray;
+            Console.WriteLine();
+            weapon = weapon + 1;
+
+            ShowHUD();
+
+            Console.ReadKey(true);
+
+            damage = 30;
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("The Player has taken " + damage + " damage.");
+            Console.WriteLine();
+            Console.ForegroundColor = ConsoleColor.Gray;
+            TakeDamage(damage);
+
+            ShowHUD();
+
+            Console.ReadKey(true);
+
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.WriteLine("Player picked up a new weapon!");//+weapon
+            Console.ForegroundColor = ConsoleColor.Gray;
+            Console.WriteLine();
+            weapon = weapon + 1;
+
+            ShowHUD();
+
+            Console.ReadKey(true);
+
+            Console.ForegroundColor = ConsoleColor.Green;
+            hp = 20;
+            Console.WriteLine("The Player used a Medical Herb and healed " + hp + " Health Points.");
+            Heal(hp);
+            Console.WriteLine();
+            Console.ForegroundColor = ConsoleColor.Gray;
+
+            ShowHUD();
+
+
+            Console.ReadKey(true);
+
+            damage = 25;
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("The Player has taken " + damage + " damage.");
+            Console.WriteLine();
+            Console.ForegroundColor = ConsoleColor.Gray;
+            TakeDamage(damage);
+
+            ShowHUD();
+
+            Console.ReadKey(true);
+
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.WriteLine("Player picked up a new weapon!");//+weapon
+            Console.ForegroundColor = ConsoleColor.Gray;
+            Console.WriteLine();
+            weapon = weapon + 1;
+
+            ShowHUD();
+
+            Console.ReadKey(true);
+
+            damage = 40;
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("The Player has taken " + damage + " damage.");
+            Console.WriteLine();
+            Console.ForegroundColor = ConsoleColor.Gray;
+            TakeDamage(damage);
+
+            ShowHUD();
+
+            Console.ReadKey(true);
+
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine();
+            Console.WriteLine("The Game Is Over");
+
+            Console.ReadKey(true);
+
         }
+
         static void ShowHUD()
 
         {
-            // Console.WriteLine("Weapon: " + weapon);
-            // Console.WriteLine("Health: " + health);
+            Console.WriteLine("///////////////////////////////////////////");
 
 
             if (health == 100)
@@ -46,17 +195,18 @@ namespace Conditionals__HUD_v1._2_
             {
                 healthStatus = "Healthy";
             }
-            else if (health >= 50)
+            else if (health > 50)
             {
                 healthStatus = "Hurt";
             }
-            else if (health >= 50)
+            else if (health >= 11)
             {
                 healthStatus = "Badly Hurt";
             }
             else if (health == 0)
             {
                 healthStatus = "Dead";
+               
             }
             else if (health <= 10)
             {
@@ -64,8 +214,11 @@ namespace Conditionals__HUD_v1._2_
             }
 
 
-            Console.WriteLine("Health: " + health + " Health Status: " + healthStatus);
+            Console.WriteLine("Player Health: " + health);
+            Console.WriteLine("Health Status: " + healthStatus);
             ChangeWeapon(weaponPickUp);
+            Console.WriteLine("///////////////////////////////////////////");
+            Console.WriteLine();
         }
         static void ChangeWeapon(int weaponPickUp)
         {
