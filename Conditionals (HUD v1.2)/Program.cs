@@ -8,15 +8,17 @@ namespace Conditionals__HUD_v1._2_
 {
     class Program
     {
-        static int weapon = 0;
+        static string weapon;
         static int health = 100;
         static string healthStatus;
         static int damage;
         static int hp;
         static int weaponPickUp;
 
+
         static void Main(string[] args)
         {
+            
             ShowHUD();
 
             Console.ReadKey(true);
@@ -33,10 +35,11 @@ namespace Conditionals__HUD_v1._2_
             Console.ReadKey(true);
 
             Console.ForegroundColor = ConsoleColor.Blue;
+            weaponPickUp = weaponPickUp + 1;
             Console.WriteLine("Player picked up a new weapon!");//+weapon
             Console.ForegroundColor = ConsoleColor.Gray;
             Console.WriteLine();
-            weapon = weapon + 1;
+            
 
             ShowHUD();
 
@@ -81,7 +84,7 @@ namespace Conditionals__HUD_v1._2_
             Console.WriteLine("Player picked up a new weapon!");//+weapon
             Console.ForegroundColor = ConsoleColor.Gray;
             Console.WriteLine();
-            weapon = weapon + 1;
+            weaponPickUp = weaponPickUp + 1;
 
             ShowHUD();
 
@@ -102,7 +105,7 @@ namespace Conditionals__HUD_v1._2_
             Console.WriteLine("Player picked up a new weapon!");//+weapon
             Console.ForegroundColor = ConsoleColor.Gray;
             Console.WriteLine();
-            weapon = weapon + 1;
+            weaponPickUp = weaponPickUp + 1;
 
             ShowHUD();
 
@@ -123,7 +126,7 @@ namespace Conditionals__HUD_v1._2_
             Console.WriteLine("Player picked up a new weapon!");//+weapon
             Console.ForegroundColor = ConsoleColor.Gray;
             Console.WriteLine();
-            weapon = weapon + 1;
+            weaponPickUp = weaponPickUp + 1;
 
             ShowHUD();
 
@@ -156,7 +159,7 @@ namespace Conditionals__HUD_v1._2_
             Console.WriteLine("Player picked up a new weapon!");//+weapon
             Console.ForegroundColor = ConsoleColor.Gray;
             Console.WriteLine();
-            weapon = weapon + 1;
+            weaponPickUp = weaponPickUp + 1;
 
             ShowHUD();
 
@@ -216,44 +219,47 @@ namespace Conditionals__HUD_v1._2_
 
             Console.WriteLine("Player Health: " + health);
             Console.WriteLine("Health Status: " + healthStatus);
+            
+            
+            
             ChangeWeapon(weaponPickUp);
             Console.WriteLine("///////////////////////////////////////////");
             Console.WriteLine();
         }
         static void ChangeWeapon(int weaponPickUp)
         {
-            if (weapon >= 6)
+            if (weaponPickUp >= 6)
             {
-                weapon = 5;
+                weaponPickUp = 5;
             }
-            if (weapon < 0)
+            if (weaponPickUp < 0)
             {
-                weapon = 0;
+                weaponPickUp = 0;
             }
 
-            weapon = weapon + weaponPickUp;
+            
 
-            if (weapon == 0)
+            if (weaponPickUp == 0)
             {
                 Console.WriteLine("Weapon: Pistol");
             }
-            else if (weapon == 1)
+            else if (weaponPickUp == 1)
             {
                 Console.WriteLine("Weapon: Shotgun");
             }
-            else if (weapon == 2)
+            else if (weaponPickUp == 2)
             {
                 Console.WriteLine("Weapon: Spreader");
             }
-            else if (weapon == 3)
+            else if (weaponPickUp == 3)
             {
                 Console.WriteLine("Weapon: Laser");
             }
-            else if (weapon == 4)
+            else if (weaponPickUp == 4)
             {
                 Console.WriteLine("Weapon: Sniper");
             }
-            else if (weapon == 5)
+            else if (weaponPickUp == 5)
             {
                 Console.WriteLine("Weapon: BFG");
             }
